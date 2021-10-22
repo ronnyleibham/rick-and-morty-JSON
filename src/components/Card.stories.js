@@ -6,4 +6,8 @@ export default {
 }
 
 export const Default = () =>
-  Card('Rick Sanchez', 'https://source.unsplash.com/400x400/?comic', 'Earth')
+  Card({
+    name: 'Rick Sanchez',
+    image: 'https://source.unsplash.com/400x400/?comic',
+    location: 'Earth',
+  })

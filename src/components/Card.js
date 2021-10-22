@@ -1,7 +1,9 @@
 import { createElement } from '../lib/dom.js'
 import './Card.css'
 
-export default function Card(name, image, location) {
+// destructuring assignment
+
+export default function Card({ image, name, location }) {
   const el = createElement('section', {
     className: 'Card',
     innerHTML: `
