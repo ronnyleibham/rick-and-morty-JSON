@@ -16,7 +16,7 @@ export default function Card({
     innerHTML: `
     <img class="Card__image" src="${image}" alt="" />
     <div><h2 class="Card__heading">${name}</h2>
-    <span style="color: ${getStatusColor(status)}">º</span>
+    <span style="color: ${getStatusColor(status)}">◉</span>
     <span>${status}</span>
     <span> - ${species}</span>
     <dl>
@@ -44,6 +44,9 @@ export default function Card({
   function getStatusColor(status) {
     if (status === 'Alive') {
       return 'green'
+    }
+    if (status === 'unknown') {
+      return 'grey'
     }
     return 'red'
   }

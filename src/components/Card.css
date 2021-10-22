@@ -8,7 +8,7 @@
   color: white;
   border-radius: 40px;
   font-family: 'Signika', sans-serif;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, -0.1286rem + 2.9714vw, 2.1rem);
 }
 
 .Card__image {
@@ -20,5 +20,5 @@
 .Card__heading {
   margin: 0;
   font-family: 'Permanent Marker', cursive;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, -0.4571rem + 5.9429vw, 4rem);
 }
