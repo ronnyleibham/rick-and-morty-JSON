@@ -10,11 +10,15 @@ fetch(url)
 
 function renderCards(characters) {
   const container = getBySelector('#cards-container')
-  characters.forEach(({ name, image, location }) => {
+  characters.forEach(({ image, name, status, species, location, episode }) => {
     const card = Card({
-      name: name,
-      image: image,
+      image,
+      name,
+      status,
+      species,
       location: location.name,
+      firstSeenInUrl: episode[0],
+      // firstMovie: episode[1].name,
     })
     container.append(card)
   })

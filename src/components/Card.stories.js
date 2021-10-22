@@ -7,7 +7,9 @@ export default {
 
 export const Default = () =>
   Card({
-    name: 'Rick Sanchez',
     image: 'https://source.unsplash.com/400x400/?comic',
+    name: 'Rick Sanchez',
+    species: 'Human',
     location: 'Earth',
+    // firstMovie: 'Pilot',
   })

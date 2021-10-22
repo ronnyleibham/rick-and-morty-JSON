@@ -19,3 +19,10 @@ button,
 textarea {
   font: inherit;
 }
+
+.h1-centered {
+  display: flex;
+  justify-content: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2.5rem;
+}
