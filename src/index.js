@@ -1,7 +1,15 @@
-import Example from './components/Example'
 import { getBySelector } from './lib/dom'
 import './styles/index.css'
 
-const example = Example('Vite Starter')
+const url = 'https://rickandmortyapi.com/api/character'
 
-getBySelector('#app').append(example)
+fetch(url)
+  .then(res => res.json())
+  .then(data => renderCards(data.results))
+
+function renderCards(characters) {
+  characters.forEach(character => {
+    const container = getBySelector('#cards-container')
+    container.innerHTML = container.innerHTML + `<div>${character.name}</div>`
+  })
+}
