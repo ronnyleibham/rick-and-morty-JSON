@@ -1,7 +1,7 @@
 import { createElement } from '../lib/dom'
 import './Navigation.css'
 
-export default function Navigation() {
+export default function Navigation({ onClick }) {
   const el = createElement(
     'nav',
     {
@@ -9,10 +9,20 @@ export default function Navigation() {
     },
     createElement(
       'button',
-      { className: 'Navigation__button Navigation__button--active' },
+      {
+        className: 'Navigation__button Navigation__button--active',
+        onclick: () => onClick('characters'),
+      },
       'Characters'
     ),
-    createElement('button', { className: 'Navigation__button' }, 'Locations')
+    createElement(
+      'button',
+      {
+        className: 'Navigation__button',
+        onclick: () => onClick('locations'),
+      },
+      'Locations'
+    )
   )
   return el
 }

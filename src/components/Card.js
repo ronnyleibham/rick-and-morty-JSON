@@ -3,14 +3,13 @@ import './Card.css'
 import Image from './Image.js'
 
 // destructuring assignment
-
 export default function Card({ name, image, location }) {
   const el = createElement(
     'section',
     {
       className: 'Card',
     },
-    Image({ image: image }),
+    Image({ src: image }),
     createElement('h2', null, name),
     createElement('span', null, 'Alive and Race'),
     createElement(
