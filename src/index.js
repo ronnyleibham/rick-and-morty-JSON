@@ -1,21 +1,25 @@
-import Card from './components/Card'
+import Card from './components/Card.js'
 import { getBySelector } from './lib/dom'
 import './styles/index.css'
 
-const url = 'https://rickandmortyapi.com/api/character'
+const url = 'https://pokeapi.co/api/v2/pokemon/?limit=10'
 
 fetch(url)
   .then(res => res.json())
-  .then(data => renderCards(data.results))
-
-function renderCards(characters) {
-  const container = getBySelector('#cards-container')
-  characters.forEach(({ name, image, location }) => {
-    const card = Card({
-      name: name,
-      image: image,
-      location: location.name,
+  .then(data => {
+    data.results.forEach(({ url }) => {
+      fetch(url)
+        .then(res => res.json())
+        .then(pokemon => renderCards(pokemon))
     })
-    container.append(card)
   })
+
+function renderCards(data) {
+  const container = getBySelector('#cards-container')
+  const card = Card({
+    name: data.name,
+    type: data.types[0].type.name,
+  })
+  console.log(data.name, data.types[0].type.name)
+  container.append(card)
 }

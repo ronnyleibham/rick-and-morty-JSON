@@ -1,8 +1,10 @@
 .Card {
   display: grid;
-  padding: 8px;
+  padding: 10px;
+  background-color: black;
+  color: white;
 }
 
 .Card__image {
-  width: 100%;
+  width: 20%;
 }
