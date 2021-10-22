@@ -1,3 +1,4 @@
+/// ...children is a "rest parameter"
 export function createElement(elementType, props, ...children) {
   const element = document.createElement(elementType)
   if (props) {

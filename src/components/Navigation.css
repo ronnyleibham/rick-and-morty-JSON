@@ -1,0 +1,15 @@
+.Navigation {
+  display: flex;
+  justify-content: start;
+  gap: 2px;
+}
+
+.Navigation__button {
+  border: none;
+  background: hotpink;
+  color: white;
+}
+
+.Navigation__button--active {
+  background: steelblue;
+}
