@@ -7,7 +7,7 @@ export default {
 
 export const Default = () =>
   Card({
-    name: 'Torben Torben',
+    name: 'Pummeloff',
     img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/40.svg',
     type: 'grass',
     level: 111,

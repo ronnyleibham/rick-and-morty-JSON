@@ -9,15 +9,15 @@ export default function Card({ name, type, weight, height, level, img }) {
     innerHTML: `
         <img class="Card__image" src="${img}" alt="" />
         <h2>${name}</h2>
+        <h3>${level}</h3>
+        <p>Level</p>
         <dl>
           <dt>Type:</dt>
           <dd>${type}</dd>
           <dt>Height:</dt>
-          <dd>${height}m</dd>
-          <dt>Level:</dt>
-          <dd>${level}</dd>
+          <dd>${height / 10} m</dd>
           <dt>weight:</dt>
-          <dd>${weight}Kg</dd>
+          <dd>${weight / 10} kg</dd>
         </dl>
     `,
   })
