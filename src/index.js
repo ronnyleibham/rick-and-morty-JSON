@@ -6,11 +6,11 @@ import './styles/index.css'
 const btn = getByDataJs('btn')
 
 btn.addEventListener('click', () => {
-  fetchAPI()
-  fetchAPI()
   document.querySelectorAll('.Card').forEach(function (a) {
     a.remove()
   })
+  fetchAPI()
+  fetchAPI()
 })
 
 function fetchAPI() {
@@ -26,7 +26,7 @@ function renderCard(data) {
     type: data.types[0].type.name,
     height: data.height,
     weight: data.weight,
-    level: data.base_experience + randomNumber(1, 50),
+    level: data.base_experience - randomNumber(1, 50),
     img: data.sprites.other.dream_world.front_default,
   })
   container.append(card)
