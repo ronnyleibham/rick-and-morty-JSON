@@ -7,17 +7,25 @@ export default function Card({ name, type, weight, height, level, img }) {
   const el = createElement('section', {
     className: 'Card',
     innerHTML: `
-        <img class="Card__image" src="${img}" alt="" />
+      <div class="image-wrapper">
+       <img class="Card__image" src="${img}" alt="" />
+      </div>
+
         <h2>${name}</h2>
-        <h3>${level}</h3>
-        <p>Level</p>
+        <h3>Level: ${level}</h3>
         <dl>
-          <dt>Type:</dt>
-          <dd>${type}</dd>
-          <dt>Height:</dt>
-          <dd>${height / 10} m</dd>
-          <dt>weight:</dt>
-          <dd>${weight / 10} kg</dd>
+          <div class="item-wrapper">
+            <dt>TYPE</dt>
+            <dd>${type}</dd>
+          </div>
+          <div class="item-wrapper">
+            <dt>HEIGHT</dt>
+            <dd>${height / 10} m</dd>
+          </div>
+          <div class="item-wrapper">
+            <dt>WEIGTH</dt>
+            <dd>${weight / 10} kg</dd>
+          </div>
         </dl>
     `,
   })

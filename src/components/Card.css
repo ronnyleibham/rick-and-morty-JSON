@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 *,
 *::before,
 *::after {
@@ -10,6 +12,11 @@
   line-height: 1.4;
 }
 
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 80px;
+}
+
 body {
   margin: 0;
 }
@@ -20,43 +27,64 @@ textarea {
   font: inherit;
 }
 
+button {
+  margin-left: 15rem;
+}
+
 .cards-container {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  align-content: center;
+  gap: 8rem;
   padding: 1rem;
 }
 
 .Card {
   display: grid;
   padding: 10px;
-  border: 2px solid papayawhip;
+  border: 1px solid black;
   border-radius: 8px;
   box-shadow: 8px 10px #888;
+  width: 250px;
+  height: 400px;
+  background-color: papayawhip;
+}
+
+.image-wrapper {
+  border-color: 2px solid red;
+  height: 150px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: white;
 }
 
 .Card__image {
-  width: 15%;
-  display: inline-block;
+  max-height: 90%;
+  max-width: 90%;
 }
 
-p {
-  border: 1px solid red;
-}
-
+h2,
 h3 {
-  border: 1px solid blue;
+  margin: auto;
+}
+
+.item-wrapper {
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
 dl {
   display: flex;
-  border: 1px solid green;
+  justify-content: space-around;
+  align-items: center;
 }
 
 dt {
-  border: 1px solid black;
+  font-size: 12px;
 }
 
 dd {
-  border: 1px solid peru;
+  margin-inline-start: 0;
 }
